@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Required;
 import org.springframework.beans.factory.annotation.Value;
 
 public class Student {
+    @Value("${student.name}")
     private String name;
     private String course;
     private String hobby;
@@ -12,9 +13,9 @@ public class Student {
         return name;
     }
 
-    @Value("${student.name}")
     public void setName(String name) {
         this.name = name;
+        System.out.println("Name setter called");
     }
 
     public String getCourse() {
@@ -24,6 +25,7 @@ public class Student {
     @Value("${student.course}")
     public void setCourse(String course) {
         this.course = course;
+        System.out.println("Course setter called");
     }
 
     public String getHobby() {
@@ -33,6 +35,7 @@ public class Student {
     @Value("${student.hobby}")
     public void setHobby(String hobby) {
         this.hobby = hobby;
+        System.out.println("Hobby setter called");
     }
 
     public void displayStudentInfo() {
