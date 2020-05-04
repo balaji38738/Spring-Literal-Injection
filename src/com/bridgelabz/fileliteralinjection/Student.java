@@ -1,5 +1,6 @@
 package com.bridgelabz.fileliteralinjection;
 
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.beans.factory.annotation.Value;
 
 public class Student {
@@ -11,7 +12,7 @@ public class Student {
         return name;
     }
 
-    @Value("Anup")
+    @Value("${student.name}")
     public void setName(String name) {
         this.name = name;
     }
@@ -20,7 +21,7 @@ public class Student {
         return course;
     }
 
-    @Value("Comp")
+    @Value("${student.course}")
     public void setCourse(String course) {
         this.course = course;
     }
@@ -29,7 +30,7 @@ public class Student {
         return hobby;
     }
 
-    @Value("Badminton")
+    @Value("${student.hobby}")
     public void setHobby(String hobby) {
         this.hobby = hobby;
     }
